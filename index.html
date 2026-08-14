@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="URJA-2047 India — Geospatial Energy Transition Intelligence Framework for Viksit Bharat 2047." />
+  <title>URJA-2047 India | Energy Transition Intelligence Dashboard</title>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="assets/dashboard.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top" aria-label="URJA-2047 India home">
+        <span class="brand-mark">U</span>
+        <span>
+          <strong>URJA-2047 INDIA</strong>
+          <small>Geospatial Energy Transition Intelligence</small>
+        </span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#map-section">Map</a>
+        <a href="#framework">Framework</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#sources">Sources</a>
+        <a class="nav-cta" href="proposal/PMRC/URJA2047_PMRC_Research_Chair_Proposal.md">Proposal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Prime Minister Research Chair • Primary theme: Energy, Sustainability & Climate Change</div>
+          <h1>A national intelligence framework for a sustainable, equitable and climate-resilient energy transition to 2047</h1>
+          <p class="lead">URJA-2047 integrates Earth observation, official Indian energy statistics, geospatial AI, renewable-resource screening, energy-service need, infrastructure constraints and multi-objective optimisation into decision-ready evidence for Viksit Bharat 2047.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#map-section">Explore the interactive map</a>
+            <a class="button secondary" href="proposal/PMRC/URJA2047_PMRC_Research_Chair_Proposal.md">Read PMRC proposal</a>
+          </div>
+          <div class="logic-strip" aria-label="Core research logic">
+            <span>USE</span><b>→</b><span>NEED</span><b>→</b><span>OPPORTUNITY</span><b>→</b><span>PATHWAY</span>
+          </div>
+          <p class="micro-note">Cross-cutting decision dimensions: <strong>COST · CARBON · CLIMATE · EQUITY</strong></p>
+        </div>
+
+        <aside class="hero-panel" aria-label="National energy transition challenge">
+          <h2>Why this matters</h2>
+          <div class="challenge-grid">
+            <div class="challenge-item"><span>~88%</span><p>crude-oil needs met through imports in 2024–25</p></div>
+            <div class="challenge-item"><span>~51%</span><p>gas needs met through imports in 2024–25</p></div>
+            <div class="challenge-item"><span>288.59 GW</span><p>renewable capacity including large hydro, 30 Jun 2026</p></div>
+            <div class="challenge-item"><span>162.15 GW</span><p>solar capacity, 30 Jun 2026</p></div>
+          </div>
+          <p class="source-mini">Official snapshot: PIB / Ministry of Petroleum & Natural Gas; MNRE. See <a href="#sources">sources</a>.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="metrics-band" aria-label="Proof-of-concept metrics">
+      <div class="shell metric-grid">
+        <div class="metric"><span>2.28 M</span><p>valid national 1-km analytical cells</p></div>
+        <div class="metric"><span>15.83%</span><p>PESM ≥ 1 spatial-CV RMSE</p></div>
+        <div class="metric"><span>7.67%</span><p>PESM ≥ 2 spatial-CV RMSE</p></div>
+        <div class="metric"><span>0.6165</span><p>structural CatBoost spatial OOF R²</p></div>
+        <div class="metric"><span>1.1037</span><p>spatial-CV RMSE in log-NTL target space</p></div>
+        <div class="metric"><span>35,000</span><p>balanced model observations</p></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="map-section">
+      <div class="section-heading two-col-heading">
+        <div>
+          <div class="eyebrow">Interactive national screening</div>
+          <h2>State/UT energy-activity mismatch diagnostics</h2>
+          <p>Explore State/UT patterns derived from the final PESM v02 national 1-km screening raster. Select a metric, hover or click a state, and compare rankings.</p>
+        </div>
+        <div class="map-control">
+          <label for="metricSelect">Map metric</label>
+          <select id="metricSelect">
+            <option value="pct_pesm_ge1">PESM ≥ 1 — % analytical area</option>
+            <option value="pct_pesm_ge2">PESM ≥ 2 — % analytical area</option>
+            <option value="mean_pesm">Mean standardized PESM</option>
+            <option value="area_pesm_ge1_km2">PESM ≥ 1 — area (km²)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="map-layout">
+        <div class="map-card">
+          <div id="map" role="application" aria-label="Interactive India State and Union Territory PESM map">
+            <div class="map-loading" id="mapLoading">Loading State/UT geometry and PESM data…</div>
+          </div>
+          <div class="map-caption" id="boundaryNote">Preferred boundary source: repository India State/UT GeoJSON. Public fallback is used only if the project boundary file has not yet been uploaded.</div>
+        </div>
+
+        <aside class="insight-card">
+          <div class="insight-head">
+            <span class="status-dot"></span>
+            <strong id="metricTitle">PESM ≥ 1 — % analytical area</strong>
+          </div>
+          <div id="stateDetail" class="state-detail">
+            <span class="state-kicker">Select a State/UT</span>
+            <h3>Click the map for detailed diagnostics</h3>
+            <p>Values are screening signals, not direct estimates of electricity poverty or deprivation.</p>
+          </div>
+          <div class="ranking-block">
+            <h3>Highest values</h3>
+            <ol id="rankingList"></ol>
+          </div>
+        </aside>
+      </div>
+
+      <div class="warning-box"><strong>Interpretation safeguard.</strong> PESM identifies lower-than-expected nighttime energy/activity conditional on population, built environment and settlement context. It must be combined with independent service-adequacy, access/reliability, vulnerability and renewable-feasibility evidence before policy classification.</div>
+    </section>
+
+    <section class="section section-tint" id="framework">
+      <div class="shell">
+        <div class="section-heading">
+          <div class="eyebrow">Research architecture</div>
+          <h2>From activity mismatch to transition pathway</h2>
+          <p>The Chair is structured to separate observed use, developmental need, renewable opportunity and implementation pathway rather than collapsing them into a single opaque index.</p>
+        </div>
+
+        <div class="framework-grid">
+          <article class="framework-card completed"><span class="badge">Proof of concept complete</span><h3>PESM</h3><p><strong>Preliminary Energy-Activity Mismatch.</strong> Expected vs observed nighttime activity conditional on population, built environment and settlement context.</p></article>
+          <article class="framework-card"><span class="badge">Objective 2</span><h3>ESAG</h3><p><strong>Energy-Service Adequacy Gap.</strong> Distinguishes adequate energy-service need from observed use using welfare, service and development evidence.</p></article>
+          <article class="framework-card"><span class="badge">Objectives 3–4</span><h3>ETFE</h3><p><strong>Energy Transition Feasibility Envelope.</strong> Solar, wind, bioenergy, hydro, rooftop, storage, grid, land, water and cost constraints.</p></article>
+          <article class="framework-card"><span class="badge">Objective 5</span><h3>SEUPA</h3><p><strong>Sustainable Energy Upliftment Priority Areas.</strong> High developmental need and vulnerability where sustainable-energy opportunity is feasible.</p></article>
+          <article class="framework-card"><span class="badge">2047 scenarios</span><h3>Demand Model</h3><p><code>D2047 = DExisting + DDevelopment + DEmerging − DEfficiency</code></p></article>
+          <article class="framework-card"><span class="badge">Decision support</span><h3>Digital Twin</h3><p>Scenario dashboards, map layers, APIs, provenance, evidence maturity and policy-ready outputs for national and pilot-scale planning.</p></article>
+        </div>
+
+        <div class="figure-placeholder" data-image="figures/framework/urja2047_framework.png">
+          <img src="figures/framework/urja2047_framework.png" alt="URJA-2047 geospatial energy transition framework" />
+          <div class="figure-fallback">
+            <strong>Framework figure slot</strong>
+            <p>Upload the corrected framework figure as <code>figures/framework/urja2047_framework.png</code>. It will appear here automatically.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="evidence">
+      <div class="section-heading">
+        <div class="eyebrow">Preliminary evidence</div>
+        <h2>Validated proof of concept</h2>
+        <p>These results demonstrate technical feasibility; the full five-year programme expands the evidence base to energy services, infrastructure, renewables, storage, climate resilience and transition economics.</p>
+      </div>
+
+      <div class="figure-grid">
+        <figure class="evidence-figure">
+          <img src="figures/pesm/pesm_spatial_cv_r2_comparison.svg" alt="Spatial cross-validation comparison for PESM candidate models" />
+          <figcaption><strong>Spatial model validation.</strong> 100-km grouped cross-validation supports the structural CatBoost operational model while retaining the terrain-conditioned formulation as a sensitivity analysis.</figcaption>
+        </figure>
+        <figure class="evidence-figure">
+          <img src="figures/pesm/pesm_structural_feature_importance.svg" alt="Structural CatBoost feature importance" />
+          <figcaption><strong>Structural drivers.</strong> Neighbourhood built and population context dominate the final operational model, supporting interpretation as an expected human activity baseline.</figcaption>
+        </figure>
+        <figure class="evidence-figure">
+          <img src="figures/state_diagnostics/pesm_top15_state_screening.svg" alt="Top State and Union Territory PESM screening extent" />
+          <figcaption><strong>Administrative diagnostics.</strong> State/UT screening extent reveals strong spatial heterogeneity that will be tested against independent energy-service and equity evidence.</figcaption>
+        </figure>
+        <figure class="evidence-figure optional-figure" data-image="figures/multipanel/urja2047_pesm_v02_multipanel_raster_state_LCC.png">
+          <img src="figures/multipanel/urja2047_pesm_v02_multipanel_raster_state_LCC.png" alt="URJA-2047 multipanel raster and State/UT PESM figure" />
+          <figcaption><strong>Multipanel raster evidence.</strong> Upload the final publication-quality multipanel image with this exact filename to display it here.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="objectives">
+      <div class="shell">
+        <div class="section-heading light">
+          <div class="eyebrow">Five-year research programme</div>
+          <h2>Six integrated objectives</h2>
+        </div>
+        <div class="objective-grid">
+          <article><span>01</span><h3>National data cube</h3><p>Harmonise energy, EO, demographic, infrastructure, climate and socioeconomic evidence on a national 1-km backbone with finer pilot grids.</p></article>
+          <article><span>02</span><h3>Use & adequacy</h3><p>Estimate observed energy activity, service adequacy and ESAG without conflating low light with deprivation.</p></article>
+          <article><span>03</span><h3>Renewable feasibility</h3><p>Map solar, wind, bioenergy, hydro, rooftop, storage and physical constraints to build ETFE.</p></article>
+          <article><span>04</span><h3>Demand–resource–grid</h3><p>Model 2047 demand, grid expansion, storage, complementarity and reliability pathways.</p></article>
+          <article><span>05</span><h3>Equitable pathways</h3><p>Optimise Cost–Carbon–Climate–Equity trade-offs and delineate SEUPA under S0–S4 scenarios.</p></article>
+          <article><span>06</span><h3>Validation & Digital Twin</h3><p>Validate representative landscapes and operationalise results through dashboards, APIs, policy briefs and open reproducible workflows.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="roadmap">
+      <div class="section-heading">
+        <div class="eyebrow">Implementation roadmap</div>
+        <h2>Five years from national baseline to operational Digital Twin</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item"><span>Year 1</span><h3>Data cube & baseline</h3><p>Authoritative source registry, geospatial harmonisation, PESM refinement, energy statistics and reproducibility framework.</p></div>
+        <div class="timeline-item"><span>Year 2</span><h3>Need & adequacy</h3><p>ESAG, access/reliability evidence, service-demand benchmarks, equity and vulnerability layers.</p></div>
+        <div class="timeline-item"><span>Year 3</span><h3>Opportunity & feasibility</h3><p>ETFE, renewable resources, grid/storage, land/water/environment constraints and climate stress testing.</p></div>
+        <div class="timeline-item"><span>Year 4</span><h3>2047 pathways</h3><p>Demand scenarios, techno-economic modelling, Pareto optimisation and SEUPA prioritisation.</p></div>
+        <div class="timeline-item"><span>Year 5</span><h3>Validation & transfer</h3><p>Pilot validation, Digital Twin deployment, institutional training, policy synthesis, APIs and long-term maintenance plan.</p></div>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="sources">
+      <div class="shell">
+        <div class="section-heading">
+          <div class="eyebrow">Evidence architecture</div>
+          <h2>Indian public-data infrastructure first</h2>
+          <p>URJA-2047 prioritises authoritative Government of India and national geospatial systems, supplemented by globally consistent EO and climate data where scientifically necessary.</p>
+        </div>
+
+        <div class="source-grid">
+          <a href="https://bhuvan.nrsc.gov.in/" target="_blank" rel="noopener"><strong>Bhuvan / NRSC / ISRO</strong><span>LULC, EO services, thematic layers, WMS/WMTS, imagery and national geospatial context</span></a>
+          <a href="https://mnre.gov.in/" target="_blank" rel="noopener"><strong>MNRE</strong><span>Renewable capacity, programme progress, state-wise RE statistics and policy evidence</span></a>
+          <a href="https://niwe.res.in/" target="_blank" rel="noopener"><strong>NIWE</strong><span>Wind resource assessment and authoritative wind-energy evidence</span></a>
+          <a href="https://cea.nic.in/" target="_blank" rel="noopener"><strong>CEA</strong><span>Electricity planning, generation, transmission, resource adequacy and storage planning</span></a>
+          <a href="https://ppac.gov.in/" target="_blank" rel="noopener"><strong>PPAC / MoPNG</strong><span>Petroleum and natural-gas statistics, imports, consumption and energy-security evidence</span></a>
+          <a href="https://www.mospi.gov.in/" target="_blank" rel="noopener"><strong>MoSPI / NSO</strong><span>Energy Statistics India, socioeconomic and Sustainable Energy Indicator evidence</span></a>
+        </div>
+
+        <div class="doc-links">
+          <a href="docs/data_sources/official_source_registry.md">Official source registry</a>
+          <a href="docs/data_sources/data_source_strategy.md">Data-source strategy</a>
+          <a href="docs/policy_context/india_energy_transition.md">Energy-transition policy context</a>
+          <a href="reproducibility/workflow/PESM_v02_reproducibility.md">PESM reproducibility workflow</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell final-cta">
+      <div>
+        <div class="eyebrow">Open research infrastructure</div>
+        <h2>URJA-2047 Digital Twin</h2>
+        <p>This dashboard is the first public-facing prototype. It will evolve into a provenance-aware scenario platform connecting national maps, energy-service adequacy, renewable feasibility, 2047 demand, cost, carbon, climate and equity evidence.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="button primary" href="https://github.com/zubairgis/URJA-2047-India" target="_blank" rel="noopener">Open GitHub repository</a>
+        <a class="button secondary" href="results/state_ut/urja2047_pesm_v02_state_ut_diagnostics.csv">Download State/UT diagnostics</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <div><strong>URJA-2047 INDIA</strong><p>Research Chair proposal / preliminary proof-of-concept stage.</p></div>
+      <div><p><strong>Scientific caution:</strong> preliminary screening outputs are not direct measures of household energy poverty, electricity access or deprivation.</p></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script src="assets/dashboard.js"></script>
+</body>
+</html>
