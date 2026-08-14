@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620">
+<rect width="1000" height="620" fill="white"/>
+<text x="500" y="42" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700">PESM v02 Operational Structural CatBoost — Feature Importance</text>
+<text x="500" y="72" text-anchor="middle" font-family="Arial" font-size="15" fill="#555">National 1-km preliminary energy-activity mismatch screening model</text>
+<line x1="285" y1="105" x2="285" y2="535" stroke="#333" stroke-width="1.5"/>
+<line x1="285" y1="535" x2="930" y2="535" stroke="#333" stroke-width="1.5"/>
+<g font-family="Arial" font-size="16" fill="#222">
+<text x="270" y="135" text-anchor="end">ln_built_context_5km</text><rect x="285" y="117" width="566" height="24" fill="#3b82f6"/><text x="860" y="135">35.36%</text>
+<text x="270" y="185" text-anchor="end">ln_pop_context_5km</text><rect x="285" y="167" width="291" height="24" fill="#3b82f6"/><text x="585" y="185">18.19%</text>
+<text x="270" y="235" text-anchor="end">built_pct</text><rect x="285" y="217" width="232" height="24" fill="#3b82f6"/><text x="526" y="235">14.48%</text>
+<text x="270" y="285" text-anchor="end">ln_built</text><rect x="285" y="267" width="230" height="24" fill="#3b82f6"/><text x="524" y="285">14.39%</text>
+<text x="270" y="335" text-anchor="end">urban_context_5km</text><rect x="285" y="317" width="130" height="24" fill="#3b82f6"/><text x="424" y="335">8.11%</text>
+<text x="270" y="385" text-anchor="end">ln_pop</text><rect x="285" y="367" width="85" height="24" fill="#3b82f6"/><text x="379" y="385">5.29%</text>
+<text x="270" y="435" text-anchor="end">ln_nres</text><rect x="285" y="417" width="15" height="24" fill="#3b82f6"/><text x="309" y="435">0.94%</text>
+<text x="270" y="485" text-anchor="end">nres_share</text><rect x="285" y="467" width="13" height="24" fill="#3b82f6"/><text x="307" y="485">0.78%</text>
+</g>
+<text x="610" y="585" text-anchor="middle" font-family="Arial" font-size="15" fill="#555">Importance is descriptive of the fitted model and is not interpreted as causal energy deprivation.</text>
+</svg>
