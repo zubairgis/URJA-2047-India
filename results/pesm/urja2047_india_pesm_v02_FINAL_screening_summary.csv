@@ -1,0 +1,12 @@
+metric,value
+Valid analytical pixels,2280332.0
+Mean standardized PESM,-0.009010957964326497
+Median standardized PESM,-0.18389195948839188
+Minimum standardized PESM,-8.081085205078125
+Maximum standardized PESM,5.450230598449707
+Pixels with PESM > 0,944997.0
+Pixels with PESM >= 1,361011.0
+Pixels with PESM >= 2,174834.0
+Percent PESM > 0,41.4412024214018
+Percent PESM >= 1,15.83151049934834
+Percent PESM >= 2,7.667041465891809
