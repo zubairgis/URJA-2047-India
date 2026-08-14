@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Credentials / secrets
+.env
+*.pem
+*.key
+credentials*.json
+service-account*.json
+
+# Large geospatial / model binaries
+*.tif
+*.tiff
+*.vrt
+*.img
+*.nc
+*.hdf
+*.h5
+*.gpkg
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.cbm
+*.joblib
+*.pkl
+*.zip
+
+# Temporary outputs
+tmp/
+temp/
+cache/
+outputs_raw/
