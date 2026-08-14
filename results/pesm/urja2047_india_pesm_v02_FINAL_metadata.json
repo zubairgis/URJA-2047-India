@@ -1,0 +1,25 @@
+{
+  "project": "URJA-2047 INDIA",
+  "product": "PESM v02",
+  "status": "final operational screening raster",
+  "model": "CatBoost Structural",
+  "resolution_m": 1000,
+  "crs": "ESRI:54009",
+  "width": 3007,
+  "height": 3625,
+  "bounds": {
+    "left": 6365000.0,
+    "right": 9372000.0,
+    "bottom": 835000.0,
+    "top": 4460000.0
+  },
+  "validation": {
+    "oof_r2": 0.6165,
+    "mean_fold_r2": 0.614,
+    "minimum_fold_r2": 0.5759,
+    "rmse": 1.1037
+  },
+  "pesm_definition": "(Expected log NTL - observed log NTL) / spatial-CV RMSE",
+  "interpretation": "Positive values indicate observed nighttime activity below structural model expectation.",
+  "warning": "PESM is not a direct measure of electricity access, consumption or energy poverty."
+}
