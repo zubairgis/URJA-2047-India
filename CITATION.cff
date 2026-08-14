@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: "URJA-2047 India: Geospatial Energy Transition Intelligence Framework"
+message: "If you use this project, please cite the repository and the associated publications or reports."
+type: software
+authors:
+  - family-names: "Islam"
+    given-names: "Zubairul"
+repository-code: "https://github.com/zubairgis/URJA-2047-India"
+license: "NOASSERTION"
+keywords:
+  - energy transition
+  - geospatial intelligence
+  - renewable energy
+  - sustainability
+  - climate resilience
+  - energy equity
+  - India
+  - Viksit Bharat 2047
