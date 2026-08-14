@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .title{font:700 36px Arial,sans-serif;fill:#14213d}.h{font:700 23px Arial,sans-serif;fill:#111827}.t{font:18px Arial,sans-serif;fill:#1f2937}.foot{font:19px Arial,sans-serif;fill:#374151}.box{stroke:#263238;stroke-width:2;rx:16;ry:16}.arrow{stroke:#243b53;stroke-width:3;fill:none;marker-end:url(#m)}
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#243b53"/></marker>
+  </defs>
+  <rect width="1600" height="900" fill="#ffffff"/>
+  <text x="800" y="58" text-anchor="middle" class="title">URJA-2047 India: Geospatial Energy Transition Intelligence Framework</text>
+
+  <rect x="65" y="105" width="330" height="165" fill="#dbeafe" class="box"/>
+  <text x="230" y="145" text-anchor="middle" class="h">National Energy Data Cube</text>
+  <text x="230" y="180" text-anchor="middle" class="t">Bhuvan/ISRO, MNRE, NIWE, CEA,</text>
+  <text x="230" y="208" text-anchor="middle" class="t">VIIRS, GHSL, population, demand,</text>
+  <text x="230" y="236" text-anchor="middle" class="t">climate and infrastructure</text>
+
+  <rect x="445" y="105" width="300" height="165" fill="#dcfce7" class="box"/>
+  <text x="595" y="155" text-anchor="middle" class="h">PESM</text>
+  <text x="595" y="195" text-anchor="middle" class="t">Expected vs observed</text>
+  <text x="595" y="223" text-anchor="middle" class="t">energy activity</text>
+
+  <rect x="795" y="105" width="300" height="165" fill="#dcfce7" class="box"/>
+  <text x="945" y="155" text-anchor="middle" class="h">ESAG</text>
+  <text x="945" y="195" text-anchor="middle" class="t">Energy-service adequacy</text>
+  <text x="945" y="223" text-anchor="middle" class="t">and gap</text>
+
+  <rect x="1145" y="105" width="390" height="165" fill="#dcfce7" class="box"/>
+  <text x="1340" y="145" text-anchor="middle" class="h">ETFE</text>
+  <text x="1340" y="180" text-anchor="middle" class="t">Energy transition feasibility envelope:</text>
+  <text x="1340" y="208" text-anchor="middle" class="t">solar, wind, bioenergy, storage,</text>
+  <text x="1340" y="236" text-anchor="middle" class="t">grid, land, water and cost</text>
+
+  <path d="M230 270 V315 H595 V350" class="arrow"/>
+  <path d="M230 315 H945 V350" class="arrow"/>
+  <path d="M230 315 H1340 V350" class="arrow"/>
+
+  <rect x="150" y="365" width="365" height="160" fill="#fef3c7" class="box"/>
+  <text x="332" y="410" text-anchor="middle" class="h">2047 Demand Model</text>
+  <text x="332" y="450" text-anchor="middle" class="t">D = Existing + Developmental</text>
+  <text x="332" y="478" text-anchor="middle" class="t">+ Emerging − Efficiency</text>
+
+  <rect x="620" y="365" width="360" height="160" fill="#fef3c7" class="box"/>
+  <text x="800" y="410" text-anchor="middle" class="h">Scenario Engine</text>
+  <text x="800" y="448" text-anchor="middle" class="t">S0 Current · S1 Least-Cost</text>
+  <text x="800" y="476" text-anchor="middle" class="t">S2 Decarbonisation · S3 Equity · S4 Integrated</text>
+
+  <rect x="1085" y="365" width="365" height="160" fill="#fef3c7" class="box"/>
+  <text x="1267" y="410" text-anchor="middle" class="h">Pareto Optimizer</text>
+  <text x="1267" y="450" text-anchor="middle" class="t">Cost · Carbon · Climate · Equity</text>
+  <text x="1267" y="478" text-anchor="middle" class="t">constraints and efficient pathways</text>
+
+  <path d="M595 270 V320 H332 V365" class="arrow"/>
+  <path d="M945 270 V320 H800 V365" class="arrow"/>
+  <path d="M1340 270 V320 H1267 V365" class="arrow"/>
+
+  <rect x="150" y="625" width="365" height="145" fill="#fce7f3" class="box"/>
+  <text x="332" y="670" text-anchor="middle" class="h">SEUPA Atlas</text>
+  <text x="332" y="708" text-anchor="middle" class="t">Sustainable Energy Upliftment</text>
+  <text x="332" y="736" text-anchor="middle" class="t">Priority Areas</text>
+
+  <rect x="620" y="625" width="360" height="145" fill="#e0e7ff" class="box"/>
+  <text x="800" y="670" text-anchor="middle" class="h">URJA-2047 Digital Twin</text>
+  <text x="800" y="708" text-anchor="middle" class="t">Dashboards, APIs, open code</text>
+  <text x="800" y="736" text-anchor="middle" class="t">and policy briefs</text>
+
+  <rect x="1085" y="625" width="365" height="145" fill="#fce7f3" class="box"/>
+  <text x="1267" y="670" text-anchor="middle" class="h">Pilot Validation</text>
+  <text x="1267" y="708" text-anchor="middle" class="t">Tribal/mountain · Northeast · arid</text>
+  <text x="1267" y="736" text-anchor="middle" class="t">coastal/island · peri-urban</text>
+
+  <path d="M332 525 V625" class="arrow"/>
+  <path d="M800 525 V625" class="arrow"/>
+  <path d="M1267 525 V625" class="arrow"/>
+
+  <text x="800" y="830" text-anchor="middle" class="foot">Core logic: energy-activity mismatch + energy-service need + renewable opportunity →</text>
+  <text x="800" y="860" text-anchor="middle" class="foot">cost-carbon-climate-equity optimized transition priorities</text>
+</svg>
