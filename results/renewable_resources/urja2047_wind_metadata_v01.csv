@@ -1,0 +1,2 @@
+system:index,evidence_level,integration_grid_m,interpretation,native_resolution_note,native_wind_height_m,period,product,project,source,version,.geo
+0,E1-derived climate resource,1000,Regional wind-climate screening only; not turbine hub-height wind potential,approximately 11 km,10,2020-2024,Wind Resource Screening,URJA-2047 INDIA,ECMWF ERA5-Land MONTHLY_BY_HOUR,v01,"{""type"":""MultiPoint"",""coordinates"":[]}"
