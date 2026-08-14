@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760">
+<rect width="1000" height="760" fill="white"/>
+<text x="500" y="42" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700">Highest State/UT PESM Screening Extent</text>
+<text x="500" y="72" text-anchor="middle" font-family="Arial" font-size="15" fill="#555">Share of analytical area with standardized PESM ≥ 1 RMSE</text>
+<line x1="265" y1="100" x2="265" y2="690" stroke="#333" stroke-width="1.5"/>
+<line x1="265" y1="690" x2="940" y2="690" stroke="#333" stroke-width="1.5"/>
+<g font-family="Arial" font-size="15" fill="#222">
+<text x="250" y="128" text-anchor="end">Himachal Pradesh</text><rect x="265" y="111" width="625" height="20" fill="#3b82f6"/><text x="898" y="128">52.94%</text>
+<text x="250" y="168" text-anchor="end">Assam</text><rect x="265" y="151" width="601" height="20" fill="#3b82f6"/><text x="874" y="168">50.91%</text>
+<text x="250" y="208" text-anchor="end">Sikkim</text><rect x="265" y="191" width="486" height="20" fill="#3b82f6"/><text x="759" y="208">41.20%</text>
+<text x="250" y="248" text-anchor="end">Meghalaya</text><rect x="265" y="231" width="440" height="20" fill="#3b82f6"/><text x="713" y="248">37.28%</text>
+<text x="250" y="288" text-anchor="end">Uttarakhand</text><rect x="265" y="271" width="407" height="20" fill="#3b82f6"/><text x="680" y="288">34.49%</text>
+<text x="250" y="328" text-anchor="end">Arunachal Pradesh</text><rect x="265" y="311" width="405" height="20" fill="#3b82f6"/><text x="678" y="328">34.36%</text>
+<text x="250" y="368" text-anchor="end">Mizoram</text><rect x="265" y="351" width="316" height="20" fill="#3b82f6"/><text x="589" y="368">26.78%</text>
+<text x="250" y="408" text-anchor="end">Kerala</text><rect x="265" y="391" width="313" height="20" fill="#3b82f6"/><text x="586" y="408">26.54%</text>
+<text x="250" y="448" text-anchor="end">Rajasthan</text><rect x="265" y="431" width="307" height="20" fill="#3b82f6"/><text x="580" y="448">25.99%</text>
+<text x="250" y="488" text-anchor="end">Jammu and Kashmir</text><rect x="265" y="471" width="294" height="20" fill="#3b82f6"/><text x="567" y="488">24.89%</text>
+<text x="250" y="528" text-anchor="end">Nagaland</text><rect x="265" y="511" width="280" height="20" fill="#3b82f6"/><text x="553" y="528">23.74%</text>
+<text x="250" y="568" text-anchor="end">Jharkhand</text><rect x="265" y="551" width="269" height="20" fill="#3b82f6"/><text x="542" y="568">22.81%</text>
+<text x="250" y="608" text-anchor="end">West Bengal</text><rect x="265" y="591" width="268" height="20" fill="#3b82f6"/><text x="541" y="608">22.71%</text>
+<text x="250" y="648" text-anchor="end">Manipur</text><rect x="265" y="631" width="247" height="20" fill="#3b82f6"/><text x="520" y="648">20.90%</text>
+<text x="250" y="688" text-anchor="end">Tripura</text><rect x="265" y="671" width="246" height="20" fill="#3b82f6"/><text x="519" y="688">20.83%</text>
+</g>
+<text x="500" y="735" text-anchor="middle" font-family="Arial" font-size="14" fill="#555">Screening extent is descriptive and requires convergence with independent energy-service and equity evidence.</text>
+</svg>
